@@ -25,10 +25,9 @@ namespace DemoLibrary
             Console.WriteLine("Processing the data");
 
             _dataAccess.Load();
-            _dataAccess.SaveData("==+++==");
+            _dataAccess.SaveData();
 
             _logger.Log("Finished processing of the data.");           
-
         }
     }
 }

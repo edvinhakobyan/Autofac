@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary.Utility
 {
-    public class Logger : ILogger
+    class Logger : ILogger
     {
+        IWriter _writer;
+
+        public Logger(IWriter writer)
+        {
+            _writer = writer;
+        }
+
         public void Log(string massage)
         {
-            Console.WriteLine($"{massage}");
+            _writer.ConsoleWrite(massage);
+            _writer.FileWrite(massage);
         }
     }
 }

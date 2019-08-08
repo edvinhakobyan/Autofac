@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary.Utility
 {
-    class DataAccess : IDataAccess
+    public class Writer : IWriter
     {
-        public void Load()
+        public void ConsoleWrite(string masage)
         {
-            Console.WriteLine("Loading Data");
+            Console.WriteLine(masage);
         }
 
-        public void SaveData()
+        public void FileWrite(string masage)
         {
-            Console.WriteLine("Saving Data");
+            
         }
     }
 }
